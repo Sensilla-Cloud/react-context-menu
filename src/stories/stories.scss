@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.context-menu {
+    background-color: #444;
+    span {
+        cursor: pointer;
+        color: #fff;
+        padding: 0 20px;
+        white-space: nowrap;
+        &:hover {
+            background-color: #555;
+            transition: background-color .25s;
+        }
+        margin-bottom: 10px;
+        &:first-child {
+            margin-top: 10px;
+        }
+    }
+    border-radius: .5em;
+    hr {
+        border: none;
+        border-bottom: 3px solid rgba(0,0,0,0.2);
+        width:100%;
+        margin: 0 0 5px;
+    }
+}
+
+.react-context-menu-container {
+    transition: opacity .25s;
+    &:empty {
+        opacity: 0;
+    }
+    &:not(:empty) {
+        opacity: 1;
+    }
+}
