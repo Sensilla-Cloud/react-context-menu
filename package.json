@@ -1,5 +1,5 @@
 {
-  "name": "@huner2/react-context-menu",
+  "name": "@sensilla-cloud/react-context-menu",
   "version": "1.0.0",
   "description": "A react component for custom context menus",
   "main": "lib/cjs/index.js",
@@ -18,18 +18,19 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup -c rollup.config.mjs"
+    "build": "rollup -c rollup.config.mjs",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huner2/react-context-menu.git"
+    "url": "git+https://github.com/sensilla-cloud/react-context-menu.git"
   },
-  "author": "Hunter Ross",
+  "author": "Sensilla Cloud",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huner2/react-context-menu/issues"
+    "url": "https://github.com/sensilla-cloud/react-context-menu/issues"
   },
-  "homepage": "https://github.com/huner2/react-context-menu#readme",
+  "homepage": "https://github.com/sensilla-cloud/react-context-menu#readme",
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@fortawesome/fontawesome-free": "^6.2.1",
