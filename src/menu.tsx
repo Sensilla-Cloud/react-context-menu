@@ -18,6 +18,7 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
 
   const openContextMenu = (event: MouseEvent) => {
     event.preventDefault();
+    event.stopPropagation();
     setAnchor([event.pageX, event.pageY]);
     setOpen(true);
     setNeedReposition(true);

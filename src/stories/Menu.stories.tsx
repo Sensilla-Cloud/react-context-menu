@@ -76,6 +76,38 @@ const ContextMenu = ({ ...args }) => {
         }}
       >
         Right-click Me!
+        {args.nested && (
+          <div style={{ position: 'relative' }}>
+            <RealMenu
+              items={args.MenuItems3.map((item: string) => (
+                <span key={item}>{item}</span>
+              ))
+                .concat([<hr key="nested-sep" />])
+                .concat(
+                  args.MenuItems4.map((item: string) => (
+                    <span key={item}>{item}</span>
+                  ))
+                )}
+              className="context-menu"
+            >
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  right: 0,
+                  width: 100,
+                  height: 100,
+                  backgroundColor: '#444',
+                  color: '#fff',
+                  textAlign: 'center',
+                  lineHeight: '100px'
+                }}
+              >
+                Or me!
+              </div>
+            </RealMenu>
+          </div>
+        )}
       </div>
     </RealMenu>
   );
@@ -100,4 +132,14 @@ SubItems.args = {
   ...DefaultArgs,
   SubMenuItems: ['Sub-item 1'],
   SubMenuItems2: ['Sub-Sub-Item 1']
+};
+
+export const NestedTriggers: ComponentStory<typeof ContextMenu> = (args) => {
+  return <ContextMenu {...args} nested />;
+};
+
+NestedTriggers.args = {
+  ...DefaultArgs,
+  MenuItems3: ['Item 11', 'Item 12', 'Item 13'],
+  MenuItems4: ['Item 14']
 };
